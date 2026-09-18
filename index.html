@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="description" content="Скачай, что надо! — большой каталог приложений и игр для iPhone, iPad и Android. Реальные способы установки, поиск, категории.">
+  <meta name="theme-color" content="#2563eb">
+  <meta property="og:title" content="Скачай, что надо!">
+  <meta property="og:description" content="Каталог приложений и игр для iPhone, iPad и Android. Найди нужное и скачай официально.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://superyaroslav8-arch.github.io/skachay-chto-nado/">
+  <title>Скачай, что надо! — каталог приложений и игр</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📥</text></svg>">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div id="app">
+    <!-- Header -->
+    <header class="header">
+      <div class="container header-inner">
+        <a href="#/" class="logo" id="logo-link">
+          <span class="logo-icon">📥</span>
+          <span class="logo-text">Скачай, что надо!</span>
+        </a>
+        <nav class="nav" id="main-nav">
+          <a href="#/" class="nav-link" data-page="home">Главная</a>
+          <a href="#/catalog" class="nav-link" data-page="catalog">Каталог</a>
+          <a href="#/categories" class="nav-link" data-page="categories">Категории</a>
+          <a href="#/games" class="nav-link" data-page="games">Игры</a>
+          <a href="#/apps" class="nav-link" data-page="apps">Приложения</a>
+          <a href="#/iphone" class="nav-link" data-page="iphone">Для iPhone</a>
+          <a href="#/android" class="nav-link" data-page="android">Для Android</a>
+          <a href="#/favorites" class="nav-link" data-page="favorites">Избранное</a>
+          <a href="#/settings" class="nav-link" data-page="settings">Настройки</a>
+        </nav>
+        <div class="header-actions">
+          <button class="theme-toggle" id="theme-toggle" aria-label="Переключить тему" title="Тема">
+            <span class="theme-icon-light">☀️</span>
+            <span class="theme-icon-dark">🌙</span>
+          </button>
+          <button class="menu-toggle" id="menu-toggle" aria-label="Меню">
+            <span></span><span></span><span></span>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <!-- Device banner -->
+    <div class="device-banner" id="device-banner">
+      <div class="container">
+        <span id="device-text">Определяем устройство...</span>
+      </div>
+    </div>
+
+    <!-- Main content -->
+    <main class="main" id="main-content">
+      <!-- Content loaded by JS -->
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-brand">
+            <span class="logo-icon">📥</span>
+            <strong>Скачай, что надо!</strong>
+            <p>Удобный каталог приложений и игр. Только официальные и разрешённые способы установки.</p>
+          </div>
+          <div class="footer-links">
+            <h4>Навигация</h4>
+            <a href="#/">Главная</a>
+            <a href="#/catalog">Каталог</a>
+            <a href="#/categories">Категории</a>
+            <a href="#/favorites">Избранное</a>
+          </div>
+          <div class="footer-links">
+            <h4>Платформы</h4>
+            <a href="#/iphone">Для iPhone</a>
+            <a href="#/android">Для Android</a>
+            <a href="#/games">Игры</a>
+          </div>
+          <div class="footer-note">
+            <p>Сайт бесплатный. Мы не распространяем пиратский контент. Все ссылки ведут на официальные источники или разрешённые альтернативы.</p>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>© 2026 Скачай, что надо! · Сделано для удобства пользователей</p>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <script src="js/data.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
