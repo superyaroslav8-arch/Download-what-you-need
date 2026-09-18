@@ -60,7 +60,11 @@
   }
   function escapeHtml(str) {
     if (!str) return '';
-    return String(str).replace(/&/g, '&').replace(/</g, '<').replace(/>/g, '>').replace(/"/g, '"');
+    return String(str)
+      .replace(/&/g, '&')
+      .replace(/</g, '<')
+      .replace(/>/g, '>')
+      .replace(/"/g, '"');
   }
 
   function searchApps(query) {
@@ -196,10 +200,10 @@
       <div class="container">
         <section class="hero">
           <h1>Скачай, что надо!</h1>
-          <p>Каталог приложений и игр для iPhone, iPad и Android. Только реальные способы установки.</p>
+          <p>Каталог как App Store и RuStore. Найди <strong>любое</strong> приложение — даже то, которое недоступно на iPhone или Android. Без регистрации.</p>
           <div class="search-box">
             <span class="search-icon">🔎</span>
-            <input type="search" class="search-input" id="search-input" placeholder="Что хотите скачать?" autocomplete="off" enterkeyhint="search">
+            <input type="search" class="search-input" id="search-input" placeholder="Что хотите скачать? Minecraft, Telegram, ChatGPT..." autocomplete="off" enterkeyhint="search">
             <div class="search-results" id="search-results"></div>
           </div>
         </section>
