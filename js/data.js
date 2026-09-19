@@ -1,3 +1,10 @@
+/**
+ * Каталог «Скачай, что надо!»
+ * Приложения + Сайты.
+ * Только реальные данные и официальные ссылки.
+ * Прямая раздача APK/IPA чужих приложений запрещена.
+ */
+
 const CATEGORIES = [
   { id: "games", name: "Игры", icon: "🎮" },
   { id: "messengers", name: "Мессенджеры", icon: "💬" },
@@ -16,512 +23,55 @@ const CATEGORIES = [
   { id: "design", name: "Дизайн", icon: "🎨" },
   { id: "programming", name: "Программирование", icon: "👨‍💻" },
   { id: "popular", name: "Популярное", icon: "⭐" },
-  { id: "new", name: "Новинки", icon: "🆕" }
+  { id: "new", name: "Новинки", icon: "🆕" },
+  { id: "news", name: "Новости", icon: "📰" },
+  { id: "search", name: "Поиск", icon: "🔍" }
 ];
 
 const APPS = [
-  {
-    id: "telegram",
-    name: "Telegram",
-    developer: "Telegram FZ-LLC",
-    category: "messengers",
-    categories: ["messengers", "popular"],
-    description: "Быстрый и безопасный мессенджер. Облачные чаты, каналы, боты, голосовые сообщения и звонки.",
-    fullDescription: "Telegram — один из самых популярных мессенджеров в мире. Поддерживает секретные чаты, большие группы, каналы, ботов, стикеры, голосовые и видеозвонки.",
-    icon: "https://upload.wikimedia.org/wikipedia/commons/8/82/Telegram_logo.svg",
-    platforms: ["ios", "android", "web"],
-    rating: 4.8,
-    version: "11.x",
-    size: "~100 МБ",
-    updated: "2026",
-    links: {
-      ios: "https://apps.apple.com/app/telegram-messenger/id686449807",
-      android: "https://play.google.com/store/apps/details?id=org.telegram.messenger",
-      web: "https://web.telegram.org",
-      official: "https://telegram.org"
-    },
-    free: true,
-    popular: true
-  },
-  {
-    id: "whatsapp",
-    name: "WhatsApp",
-    developer: "Meta Platforms",
-    category: "messengers",
-    categories: ["messengers", "popular"],
-    description: "Простой и надёжный мессенджер от Meta. Сообщения, звонки, статусы, группы.",
-    fullDescription: "WhatsApp Messenger позволяет обмениваться сообщениями, совершать голосовые и видеозвонки. End-to-end шифрование по умолчанию.",
-    icon: "https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg",
-    platforms: ["ios", "android", "web"],
-    rating: 4.6,
-    version: "2.x",
-    size: "~80 МБ",
-    updated: "2026",
-    links: {
-      ios: "https://apps.apple.com/app/whatsapp-messenger/id310633997",
-      android: "https://play.google.com/store/apps/details?id=com.whatsapp",
-      web: "https://web.whatsapp.com",
-      official: "https://www.whatsapp.com"
-    },
-    free: true,
-    popular: true
-  },
-  {
-    id: "youtube",
-    name: "YouTube",
-    developer: "Google LLC",
-    category: "video",
-    categories: ["video", "popular"],
-    description: "Смотрите видео, подписывайтесь на каналы, создавайте контент.",
-    fullDescription: "YouTube — крупнейшая видеоплатформа. Миллиарды видео, прямые трансляции, Shorts, музыка и подкасты.",
-    icon: "https://upload.wikimedia.org/wikipedia/commons/0/09/YouTube_full-color_icon_%282017%29.svg",
-    platforms: ["ios", "android", "web"],
-    rating: 4.5,
-    version: "19.x",
-    size: "~50 МБ",
-    updated: "2026",
-    links: {
-      ios: "https://apps.apple.com/app/youtube-watch-listen-stream/id544007664",
-      android: "https://play.google.com/store/apps/details?id=com.google.android.youtube",
-      web: "https://www.youtube.com",
-      official: "https://www.youtube.com"
-    },
-    free: true,
-    popular: true
-  },
-  {
-    id: "instagram",
-    name: "Instagram",
-    developer: "Meta Platforms",
-    category: "social",
-    categories: ["social", "photo", "popular"],
-    description: "Фото, видео, Reels, Stories и общение с друзьями.",
-    fullDescription: "Instagram — социальная сеть для обмена фотографиями и видео. Reels, Stories, прямые эфиры, сообщения.",
-    icon: "https://upload.wikimedia.org/wikipedia/commons/e/e7/Instagram_logo_2016.svg",
-    platforms: ["ios", "android", "web"],
-    rating: 4.4,
-    version: "350+",
-    size: "~100 МБ",
-    updated: "2026",
-    links: {
-      ios: "https://apps.apple.com/app/instagram/id389801252",
-      android: "https://play.google.com/store/apps/details?id=com.instagram.android",
-      web: "https://www.instagram.com",
-      official: "https://www.instagram.com"
-    },
-    free: true,
-    popular: true
-  },
-  {
-    id: "tiktok",
-    name: "TikTok",
-    developer: "TikTok Pte. Ltd.",
-    category: "social",
-    categories: ["social", "video", "popular"],
-    description: "Короткие видео, тренды, музыка и творчество.",
-    fullDescription: "TikTok — платформа коротких вертикальных видео. Тренды, эффекты, музыка, прямые эфиры.",
-    icon: "https://upload.wikimedia.org/wikipedia/en/a/a9/TikTok_logo.svg",
-    platforms: ["ios", "android", "web"],
-    rating: 4.5,
-    version: "35+",
-    size: "~150 МБ",
-    updated: "2026",
-    links: {
-      ios: "https://apps.apple.com/app/tiktok/id835599320",
-      android: "https://play.google.com/store/apps/details?id=com.zhiliaoapp.musically",
-      web: "https://www.tiktok.com",
-      official: "https://www.tiktok.com"
-    },
-    free: true,
-    popular: true
-  },
-  {
-    id: "minecraft",
-    name: "Minecraft",
-    developer: "Mojang / Microsoft",
-    category: "games",
-    categories: ["games", "popular"],
-    description: "Песочница, где можно строить, выживать и исследовать бесконечные миры.",
-    fullDescription: "Minecraft — культовая игра-песочница. Создавайте миры, выживайте, сражайтесь с мобами, стройте всё, что угодно.",
-    icon: "https://upload.wikimedia.org/wikipedia/en/5/51/Minecraft_cover.png",
-    platforms: ["ios", "android"],
-    rating: 4.6,
-    version: "1.21+",
-    size: "~300 МБ",
-    updated: "2026",
-    links: {
-      ios: "https://apps.apple.com/app/minecraft/id479516143",
-      android: "https://play.google.com/store/apps/details?id=com.mojang.minecraftpe",
-      official: "https://www.minecraft.net"
-    },
-    free: false,
-    note: "Платное приложение. Официальная покупка в App Store / Google Play.",
-    popular: true
-  },
-  {
-    id: "chatgpt",
-    name: "ChatGPT",
-    developer: "OpenAI",
-    category: "ai",
-    categories: ["ai", "popular", "new"],
-    description: "Искусственный интеллект для общения, написания текстов, кода и идей.",
-    fullDescription: "ChatGPT от OpenAI — мощный ИИ-ассистент. Отвечает на вопросы, помогает с текстами, кодом, анализом и творчеством.",
-    icon: "https://upload.wikimedia.org/wikipedia/commons/0/04/ChatGPT_logo.svg",
-    platforms: ["ios", "android", "web"],
-    rating: 4.8,
-    version: "1.x",
-    size: "~50 МБ",
-    updated: "2026",
-    links: {
-      ios: "https://apps.apple.com/app/chatgpt/id6448311069",
-      android: "https://play.google.com/store/apps/details?id=com.openai.chatgpt",
-      web: "https://chat.openai.com",
-      official: "https://openai.com/chatgpt"
-    },
-    free: true,
-    popular: true
-  },
-  {
-    id: "spotify",
-    name: "Spotify",
-    developer: "Spotify AB",
-    category: "music",
-    categories: ["music", "popular"],
-    description: "Музыка, подкасты и плейлисты. Миллионы треков.",
-    fullDescription: "Spotify — стриминговый сервис музыки и подкастов. Персональные рекомендации, плейлисты, офлайн-режим (по подписке).",
-    icon: "https://upload.wikimedia.org/wikipedia/commons/1/19/Spotify_logo_without_text.svg",
-    platforms: ["ios", "android", "web"],
-    rating: 4.7,
-    version: "8.x",
-    size: "~100 МБ",
-    updated: "2026",
-    links: {
-      ios: "https://apps.apple.com/app/spotify-music-and-podcasts/id324684580",
-      android: "https://play.google.com/store/apps/details?id=com.spotify.music",
-      web: "https://open.spotify.com",
-      official: "https://www.spotify.com"
-    },
-    free: true,
-    popular: true
-  },
-  {
-    id: "netflix",
-    name: "Netflix",
-    developer: "Netflix, Inc.",
-    category: "video",
-    categories: ["video", "popular"],
-    description: "Фильмы, сериалы и шоу. Смотрите онлайн и офлайн.",
-    fullDescription: "Netflix — один из крупнейших стриминговых сервисов. Оригинальные сериалы, фильмы, документалки. Требуется подписка.",
-    icon: "https://upload.wikimedia.org/wikipedia/commons/0/08/Netflix_2015_logo.svg",
-    platforms: ["ios", "android", "web"],
-    rating: 4.5,
-    version: "8.x",
-    size: "~80 МБ",
-    updated: "2026",
-    links: {
-      ios: "https://apps.apple.com/app/netflix/id363590051",
-      android: "https://play.google.com/store/apps/details?id=com.netflix.mediaclient",
-      web: "https://www.netflix.com",
-      official: "https://www.netflix.com"
-    },
-    free: false,
-    note: "Требуется подписка Netflix.",
-    popular: true
-  },
-  {
-    id: "vk",
-    name: "ВКонтакте",
-    developer: "VK",
-    category: "social",
-    categories: ["social", "popular"],
-    description: "Социальная сеть, музыка, видео, сообщения и сообщества.",
-    fullDescription: "ВКонтакте — крупнейшая социальная сеть в русскоязычном сегменте. Друзья, сообщества, музыка, видео, мини-приложения.",
-    icon: "https://upload.wikimedia.org/wikipedia/commons/2/21/VK.com-logo.svg",
-    platforms: ["ios", "android", "web"],
-    rating: 4.5,
-    version: "5.x",
-    size: "~120 МБ",
-    updated: "2026",
-    links: {
-      ios: "https://apps.apple.com/app/vk-music-video-messenger/id564177498",
-      android: "https://play.google.com/store/apps/details?id=com.vkontakte.android",
-      web: "https://vk.com",
-      official: "https://vk.com"
-    },
-    free: true,
-    popular: true
-  },
-  {
-    id: "discord",
-    name: "Discord",
-    developer: "Discord Inc.",
-    category: "messengers",
-    categories: ["messengers", "games", "popular"],
-    description: "Голосовой и текстовый чат для геймеров и сообществ.",
-    fullDescription: "Discord — платформа для общения в голосовых и текстовых каналах. Серверы, боты, стриминг экрана.",
-    icon: "https://upload.wikimedia.org/wikipedia/en/9/98/Discord_logo.svg",
-    platforms: ["ios", "android", "web"],
-    rating: 4.5,
-    version: "200+",
-    size: "~100 МБ",
-    updated: "2026",
-    links: {
-      ios: "https://apps.apple.com/app/discord-talk-play-hang-out/id985746746",
-      android: "https://play.google.com/store/apps/details?id=com.discord",
-      web: "https://discord.com/app",
-      official: "https://discord.com"
-    },
-    free: true,
-    popular: true
-  },
-  {
-    id: "roblox",
-    name: "Roblox",
-    developer: "Roblox Corporation",
-    category: "games",
-    categories: ["games", "popular"],
-    description: "Миллионы игр, созданных игроками. Играйте и создавайте.",
-    fullDescription: "Roblox — платформа пользовательских игр и миров. Играйте в чужие проекты или создавайте свои.",
-    icon: "https://upload.wikimedia.org/wikipedia/commons/3/3a/Roblox_player_icon_black.svg",
-    platforms: ["ios", "android"],
-    rating: 4.4,
-    version: "2.x",
-    size: "~200 МБ",
-    updated: "2026",
-    links: {
-      ios: "https://apps.apple.com/app/roblox/id431946152",
-      android: "https://play.google.com/store/apps/details?id=com.roblox.client",
-      official: "https://www.roblox.com"
-    },
-    free: true,
-    popular: true
-  },
-  {
-    id: "duolingo",
-    name: "Duolingo",
-    developer: "Duolingo",
-    category: "education",
-    categories: ["education", "popular"],
-    description: "Изучайте языки бесплатно. Уроки, игры и стрики.",
-    fullDescription: "Duolingo — популярное приложение для изучения языков. Короткие уроки, геймификация, десятки языков.",
-    icon: "https://upload.wikimedia.org/wikipedia/commons/1/15/Duolingo_logo.svg",
-    platforms: ["ios", "android", "web"],
-    rating: 4.7,
-    version: "6.x",
-    size: "~80 МБ",
-    updated: "2026",
-    links: {
-      ios: "https://apps.apple.com/app/duolingo-language-lessons/id570060128",
-      android: "https://play.google.com/store/apps/details?id=com.duolingo",
-      web: "https://www.duolingo.com",
-      official: "https://www.duolingo.com"
-    },
-    free: true,
-    popular: true
-  },
-  {
-    id: "notion",
-    name: "Notion",
-    developer: "Notion Labs",
-    category: "work",
-    categories: ["work", "utilities"],
-    description: "Заметки, базы данных, вики и проекты в одном месте.",
-    fullDescription: "Notion — универсальное рабочее пространство. Заметки, задачи, базы данных, документы и совместная работа.",
-    icon: "https://upload.wikimedia.org/wikipedia/commons/4/45/Notion_app_logo.png",
-    platforms: ["ios", "android", "web"],
-    rating: 4.7,
-    version: "0.x",
-    size: "~50 МБ",
-    updated: "2026",
-    links: {
-      ios: "https://apps.apple.com/app/notion-notes-docs-tasks/id1232780281",
-      android: "https://play.google.com/store/apps/details?id=notion.id",
-      web: "https://www.notion.so",
-      official: "https://www.notion.so"
-    },
-    free: true
-  },
-  {
-    id: "canva",
-    name: "Canva",
-    developer: "Canva",
-    category: "design",
-    categories: ["design", "photo"],
-    description: "Дизайн для всех. Шаблоны, фото, видео и презентации.",
-    fullDescription: "Canva — простой и мощный онлайн-редактор дизайна. Шаблоны для соцсетей, презентаций, постеров, видео.",
-    icon: "https://upload.wikimedia.org/wikipedia/commons/0/08/Canva_icon_2021.svg",
-    platforms: ["ios", "android", "web"],
-    rating: 4.8,
-    version: "2.x",
-    size: "~100 МБ",
-    updated: "2026",
-    links: {
-      ios: "https://apps.apple.com/app/canva-design-photo-video/id897446215",
-      android: "https://play.google.com/store/apps/details?id=com.canva.editor",
-      web: "https://www.canva.com",
-      official: "https://www.canva.com"
-    },
-    free: true
-  },
-  {
-    id: "signal",
-    name: "Signal",
-    developer: "Signal Foundation",
-    category: "messengers",
-    categories: ["messengers", "security"],
-    description: "Приватный мессенджер с end-to-end шифрованием.",
-    fullDescription: "Signal — мессенджер с сильным акцентом на приватность. Открытый исходный код, end-to-end шифрование по умолчанию.",
-    icon: "https://upload.wikimedia.org/wikipedia/commons/8/8d/Signal-Logo.svg",
-    platforms: ["ios", "android", "web"],
-    rating: 4.6,
-    version: "7.x",
-    size: "~80 МБ",
-    updated: "2026",
-    links: {
-      ios: "https://apps.apple.com/app/signal-private-messenger/id874139669",
-      android: "https://play.google.com/store/apps/details?id=org.thoughtcrime.securesms",
-      web: "https://signal.org",
-      official: "https://signal.org"
-    },
-    free: true
-  },
-  {
-    id: "github",
-    name: "GitHub",
-    developer: "GitHub / Microsoft",
-    category: "programming",
-    categories: ["programming", "work"],
-    description: "Код, репозитории, Issues и Pull Requests в кармане.",
-    fullDescription: "Официальное приложение GitHub. Просматривайте репозитории, Issues, Pull Requests, уведомления и код.",
-    icon: "https://upload.wikimedia.org/wikipedia/commons/9/91/Octicons-mark-github.svg",
-    platforms: ["ios", "android", "web"],
-    rating: 4.6,
-    version: "1.x",
-    size: "~40 МБ",
-    updated: "2026",
-    links: {
-      ios: "https://apps.apple.com/app/github/id1477376905",
-      android: "https://play.google.com/store/apps/details?id=com.github.android",
-      web: "https://github.com",
-      official: "https://github.com"
-    },
-    free: true
-  },
-  {
-    id: "claude",
-    name: "Claude",
-    developer: "Anthropic",
-    category: "ai",
-    categories: ["ai", "new"],
-    description: "ИИ-ассистент от Anthropic. Безопасный и полезный.",
-    fullDescription: "Claude — ИИ от Anthropic. Помогает с текстами, анализом, кодом и рассуждениями. Есть веб-версия и приложения.",
-    icon: "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/Claude_AI_logo.svg/240px-Claude_AI_logo.svg.png",
-    platforms: ["ios", "android", "web"],
-    rating: 4.7,
-    version: "1.x",
-    size: "~40 МБ",
-    updated: "2026",
-    links: {
-      ios: "https://apps.apple.com/app/claude-by-anthropic/id6473753684",
-      android: "https://play.google.com/store/apps/details?id=com.anthropic.claude",
-      web: "https://claude.ai",
-      official: "https://claude.ai"
-    },
-    free: true,
-    popular: true
-  },
-  {
-    id: "capcut",
-    name: "CapCut",
-    developer: "Bytedance",
-    category: "photo",
-    categories: ["photo", "video", "popular"],
-    description: "Мощный видеоредактор. Эффекты, шаблоны, музыка.",
-    fullDescription: "CapCut — бесплатный видеоредактор от создателей TikTok. Монтаж, эффекты, переходы, субтитры и шаблоны.",
-    icon: "https://upload.wikimedia.org/wikipedia/en/thumb/a/a0/CapCut_logo.svg/240px-CapCut_logo.svg.png",
-    platforms: ["ios", "android"],
-    rating: 4.7,
-    version: "10+",
-    size: "~150 МБ",
-    updated: "2026",
-    links: {
-      ios: "https://apps.apple.com/app/capcut-video-editor/id1500855883",
-      android: "https://play.google.com/store/apps/details?id=com.lemon.lvoverseas",
-      official: "https://www.capcut.com"
-    },
-    free: true,
-    popular: true
-  },
-  {
-    id: "yandex-maps",
-    name: "Яндекс Карты",
-    developer: "Yandex",
-    category: "navigation",
-    categories: ["navigation", "popular"],
-    description: "Карты, навигация, пробки, транспорт и организации.",
-    fullDescription: "Яндекс Карты — подробные карты, навигация с учётом пробок, общественный транспорт, поиск организаций.",
-    icon: "https://upload.wikimedia.org/wikipedia/commons/thumb/8/80/Yandex_Maps_icon.svg/240px-Yandex_Maps_icon.svg.png",
-    platforms: ["ios", "android", "web"],
-    rating: 4.7,
-    version: "12+",
-    size: "~80 МБ",
-    updated: "2026",
-    links: {
-      ios: "https://apps.apple.com/app/yandex-maps-and-navigator/id313877526",
-      android: "https://play.google.com/store/apps/details?id=ru.yandex.yandexmaps",
-      web: "https://yandex.ru/maps",
-      official: "https://yandex.ru/maps"
-    },
-    free: true,
-    popular: true
-  },
-  {
-    id: "avito",
-    name: "Авито",
-    developer: "Avito",
-    category: "shopping",
-    categories: ["shopping", "popular"],
-    description: "Объявления: купить, продать, снять, найти услуги.",
-    fullDescription: "Авито — крупнейшая площадка объявлений в России. Товары, недвижимость, работа, услуги.",
-    icon: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a0/Avito_logo.svg/240px-Avito_logo.svg.png",
-    platforms: ["ios", "android", "web"],
-    rating: 4.7,
-    version: "100+",
-    size: "~80 МБ",
-    updated: "2026",
-    links: {
-      ios: "https://apps.apple.com/app/avito/id417281773",
-      android: "https://play.google.com/store/apps/details?id=com.avito.android",
-      web: "https://www.avito.ru",
-      official: "https://www.avito.ru"
-    },
-    free: true,
-    popular: true
-  },
-  {
-    id: "wildberries",
-    name: "Wildberries",
-    developer: "Wildberries",
-    category: "shopping",
-    categories: ["shopping", "popular"],
-    description: "Один из крупнейших маркетплейсов. Товары с доставкой.",
-    fullDescription: "Wildberries — крупный онлайн-магазин. Одежда, электроника, товары для дома с доставкой.",
-    icon: "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1e/Wildberries_logo.svg/240px-Wildberries_logo.svg.png",
-    platforms: ["ios", "android", "web"],
-    rating: 4.5,
-    version: "5.x",
-    size: "~80 МБ",
-    updated: "2026",
-    links: {
-      ios: "https://apps.apple.com/app/wildberries/id597880187",
-      android: "https://play.google.com/store/apps/details?id=com.wildberries.ru",
-      web: "https://www.wildberries.ru",
-      official: "https://www.wildberries.ru"
-    },
-    free: true,
-    popular: true
-  }
+  { id: "telegram", type: "app", name: "Telegram", developer: "Telegram FZ-LLC", category: "messengers", categories: ["messengers", "popular"], description: "Быстрый и безопасный мессенджер. Облачные чаты, каналы, боты.", fullDescription: "Telegram — один из самых популярных мессенджеров.", icon: "https://upload.wikimedia.org/wikipedia/commons/8/82/Telegram_logo.svg", platforms: ["ios", "android", "web"], rating: 4.8, free: true, popular: true, links: { ios: "https://apps.apple.com/app/telegram-messenger/id686449807", android: "https://play.google.com/store/apps/details?id=org.telegram.messenger", web: "https://web.telegram.org", official: "https://telegram.org" } },
+  { id: "whatsapp", type: "app", name: "WhatsApp", developer: "Meta", category: "messengers", categories: ["messengers", "popular"], description: "Мессенджер от Meta. Сообщения, звонки, статусы.", fullDescription: "WhatsApp — простой мессенджер с end-to-end шифрованием.", icon: "https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg", platforms: ["ios", "android", "web"], rating: 4.6, free: true, popular: true, links: { ios: "https://apps.apple.com/app/whatsapp-messenger/id310633997", android: "https://play.google.com/store/apps/details?id=com.whatsapp", web: "https://web.whatsapp.com", official: "https://www.whatsapp.com" } },
+  { id: "youtube", type: "app", name: "YouTube", developer: "Google", category: "video", categories: ["video", "popular"], description: "Видео, Shorts, прямые трансляции и музыка.", fullDescription: "Крупнейшая видеоплатформа мира.", icon: "https://upload.wikimedia.org/wikipedia/commons/0/09/YouTube_full-color_icon_%282017%29.svg", platforms: ["ios", "android", "web"], rating: 4.5, free: true, popular: true, links: { ios: "https://apps.apple.com/app/youtube-watch-listen-stream/id544007664", android: "https://play.google.com/store/apps/details?id=com.google.android.youtube", web: "https://www.youtube.com", official: "https://www.youtube.com" } },
+  { id: "instagram", type: "app", name: "Instagram", developer: "Meta", category: "social", categories: ["social", "photo", "popular"], description: "Фото, Reels, Stories и общение.", fullDescription: "Социальная сеть для фото и коротких видео.", icon: "https://upload.wikimedia.org/wikipedia/commons/e/e7/Instagram_logo_2016.svg", platforms: ["ios", "android", "web"], rating: 4.4, free: true, popular: true, links: { ios: "https://apps.apple.com/app/instagram/id389801252", android: "https://play.google.com/store/apps/details?id=com.instagram.android", web: "https://www.instagram.com", official: "https://www.instagram.com" } },
+  { id: "tiktok", type: "app", name: "TikTok", developer: "TikTok", category: "social", categories: ["social", "video", "popular"], description: "Короткие видео и тренды.", fullDescription: "Платформа коротких вертикальных видео.", icon: "https://upload.wikimedia.org/wikipedia/en/a/a9/TikTok_logo.svg", platforms: ["ios", "android", "web"], rating: 4.5, free: true, popular: true, links: { ios: "https://apps.apple.com/app/tiktok/id835599320", android: "https://play.google.com/store/apps/details?id=com.zhiliaoapp.musically", web: "https://www.tiktok.com", official: "https://www.tiktok.com" } },
+  { id: "chatgpt", type: "app", name: "ChatGPT", developer: "OpenAI", category: "ai", categories: ["ai", "popular", "new"], description: "ИИ-ассистент для текстов, кода и идей.", fullDescription: "Мощный ИИ от OpenAI. Есть веб-версия и приложения.", icon: "https://upload.wikimedia.org/wikipedia/commons/0/04/ChatGPT_logo.svg", platforms: ["ios", "android", "web"], rating: 4.8, free: true, popular: true, links: { ios: "https://apps.apple.com/app/chatgpt/id6448311069", android: "https://play.google.com/store/apps/details?id=com.openai.chatgpt", web: "https://chat.openai.com", official: "https://openai.com/chatgpt" } },
+  { id: "spotify", type: "app", name: "Spotify", developer: "Spotify", category: "music", categories: ["music", "popular"], description: "Музыка и подкасты.", fullDescription: "Стриминговый сервис музыки.", icon: "https://upload.wikimedia.org/wikipedia/commons/1/19/Spotify_logo_without_text.svg", platforms: ["ios", "android", "web"], rating: 4.7, free: true, popular: true, links: { ios: "https://apps.apple.com/app/spotify-music-and-podcasts/id324684580", android: "https://play.google.com/store/apps/details?id=com.spotify.music", web: "https://open.spotify.com", official: "https://www.spotify.com" } },
+  { id: "minecraft", type: "app", name: "Minecraft", developer: "Mojang / Microsoft", category: "games", categories: ["games", "popular"], description: "Песочница. Строй, выживай, исследуй.", fullDescription: "Культовая игра-песочница. Платное приложение.", icon: "https://upload.wikimedia.org/wikipedia/en/5/51/Minecraft_cover.png", platforms: ["ios", "android"], rating: 4.6, free: false, popular: true, note: "Платное. Покупается только в официальных магазинах.", links: { ios: "https://apps.apple.com/app/minecraft/id479516143", android: "https://play.google.com/store/apps/details?id=com.mojang.minecraftpe", official: "https://www.minecraft.net" } },
+  { id: "vk", type: "app", name: "ВКонтакте", developer: "VK", category: "social", categories: ["social", "popular"], description: "Социальная сеть, музыка, видео, сообщения.", fullDescription: "Крупнейшая соцсеть русскоязычного сегмента.", icon: "https://upload.wikimedia.org/wikipedia/commons/2/21/VK.com-logo.svg", platforms: ["ios", "android", "web"], rating: 4.5, free: true, popular: true, links: { ios: "https://apps.apple.com/app/vk-music-video-messenger/id564177498", android: "https://play.google.com/store/apps/details?id=com.vkontakte.android", web: "https://vk.com", official: "https://vk.com" } },
+  { id: "discord", type: "app", name: "Discord", developer: "Discord", category: "messengers", categories: ["messengers", "games", "popular"], description: "Голосовой и текстовый чат для сообществ.", fullDescription: "Платформа для геймеров и сообществ.", icon: "https://upload.wikimedia.org/wikipedia/en/9/98/Discord_logo.svg", platforms: ["ios", "android", "web"], rating: 4.5, free: true, popular: true, links: { ios: "https://apps.apple.com/app/discord-talk-play-hang-out/id985746746", android: "https://play.google.com/store/apps/details?id=com.discord", web: "https://discord.com/app", official: "https://discord.com" } },
+  { id: "roblox", type: "app", name: "Roblox", developer: "Roblox", category: "games", categories: ["games", "popular"], description: "Миллионы игр от игроков.", fullDescription: "Платформа пользовательских игр.", icon: "https://upload.wikimedia.org/wikipedia/commons/3/3a/Roblox_player_icon_black.svg", platforms: ["ios", "android"], rating: 4.4, free: true, popular: true, links: { ios: "https://apps.apple.com/app/roblox/id431946152", android: "https://play.google.com/store/apps/details?id=com.roblox.client", official: "https://www.roblox.com" } },
+  { id: "duolingo", type: "app", name: "Duolingo", developer: "Duolingo", category: "education", categories: ["education", "popular"], description: "Изучение языков бесплатно.", fullDescription: "Популярное приложение для изучения языков.", icon: "https://upload.wikimedia.org/wikipedia/commons/1/15/Duolingo_logo.svg", platforms: ["ios", "android", "web"], rating: 4.7, free: true, popular: true, links: { ios: "https://apps.apple.com/app/duolingo-language-lessons/id570060128", android: "https://play.google.com/store/apps/details?id=com.duolingo", web: "https://www.duolingo.com", official: "https://www.duolingo.com" } },
+  { id: "claude", type: "app", name: "Claude", developer: "Anthropic", category: "ai", categories: ["ai", "new"], description: "ИИ-ассистент от Anthropic.", fullDescription: "Безопасный и полезный ИИ.", icon: "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/Claude_AI_logo.svg/240px-Claude_AI_logo.svg.png", platforms: ["ios", "android", "web"], rating: 4.7, free: true, popular: true, links: { ios: "https://apps.apple.com/app/claude-by-anthropic/id6473753684", android: "https://play.google.com/store/apps/details?id=com.anthropic.claude", web: "https://claude.ai", official: "https://claude.ai" } },
+  { id: "capcut", type: "app", name: "CapCut", developer: "Bytedance", category: "photo", categories: ["photo", "video", "popular"], description: "Мощный видеоредактор.", fullDescription: "Бесплатный видеоредактор с эффектами и шаблонами.", icon: "https://upload.wikimedia.org/wikipedia/en/thumb/a/a0/CapCut_logo.svg/240px-CapCut_logo.svg.png", platforms: ["ios", "android"], rating: 4.7, free: true, popular: true, links: { ios: "https://apps.apple.com/app/capcut-video-editor/id1500855883", android: "https://play.google.com/store/apps/details?id=com.lemon.lvoverseas", official: "https://www.capcut.com" } },
+  { id: "sber", type: "app", name: "СберБанк Онлайн", developer: "Сбербанк", category: "finance", categories: ["finance", "popular"], description: "Банк в телефоне. Платежи, переводы, сервисы.", fullDescription: "Официальное приложение Сбера. Доступно только через официальные магазины.", icon: "https://upload.wikimedia.org/wikipedia/commons/thumb/2/20/Sberbank_Logo_2020.svg/240px-Sberbank_Logo_2020.svg.png", platforms: ["ios", "android"], rating: 4.6, free: true, popular: true, note: "Банковские приложения устанавливаются только из официальных магазинов. Прямая раздача запрещена.", links: { ios: "https://apps.apple.com/app/sberbank-online/id492071542", android: "https://play.google.com/store/apps/details?id=ru.sberbankmobile", official: "https://www.sberbank.ru" } },
+  { id: "tbank", type: "app", name: "Т-Банк", developer: "Т-Банк", category: "finance", categories: ["finance", "popular"], description: "Мобильный банк. Карты, платежи, инвестиции.", fullDescription: "Официальное приложение Т-Банка.", icon: "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Tinkoff_Bank_logo.svg/240px-Tinkoff_Bank_logo.svg.png", platforms: ["ios", "android"], rating: 4.8, free: true, popular: true, note: "Банковские приложения — только из App Store / Google Play.", links: { ios: "https://apps.apple.com/app/tinkoff/id1360255754", android: "https://play.google.com/store/apps/details?id=com.idamob.tinkoff.android", official: "https://www.tbank.ru" } },
+  { id: "avito", type: "app", name: "Авито", developer: "Avito", category: "shopping", categories: ["shopping", "popular"], description: "Объявления: купить, продать, снять.", fullDescription: "Крупнейшая площадка объявлений.", icon: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a0/Avito_logo.svg/240px-Avito_logo.svg.png", platforms: ["ios", "android", "web"], rating: 4.7, free: true, popular: true, links: { ios: "https://apps.apple.com/app/avito/id417281773", android: "https://play.google.com/store/apps/details?id=com.avito.android", web: "https://www.avito.ru", official: "https://www.avito.ru" } },
+  { id: "wildberries", type: "app", name: "Wildberries", developer: "Wildberries", category: "shopping", categories: ["shopping", "popular"], description: "Маркетплейс с доставкой.", fullDescription: "Крупный онлайн-магазин.", icon: "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1e/Wildberries_logo.svg/240px-Wildberries_logo.svg.png", platforms: ["ios", "android", "web"], rating: 4.5, free: true, popular: true, links: { ios: "https://apps.apple.com/app/wildberries/id597880187", android: "https://play.google.com/store/apps/details?id=com.wildberries.ru", web: "https://www.wildberries.ru", official: "https://www.wildberries.ru" } },
+  { id: "yandex-maps", type: "app", name: "Яндекс Карты", developer: "Yandex", category: "navigation", categories: ["navigation", "popular"], description: "Карты, навигация, пробки, транспорт.", fullDescription: "Подробные карты и навигация.", icon: "https://upload.wikimedia.org/wikipedia/commons/thumb/8/80/Yandex_Maps_icon.svg/240px-Yandex_Maps_icon.svg.png", platforms: ["ios", "android", "web"], rating: 4.7, free: true, popular: true, links: { ios: "https://apps.apple.com/app/yandex-maps-and-navigator/id313877526", android: "https://play.google.com/store/apps/details?id=ru.yandex.yandexmaps", web: "https://yandex.ru/maps", official: "https://yandex.ru/maps" } },
+  { id: "notion", type: "app", name: "Notion", developer: "Notion Labs", category: "work", categories: ["work", "utilities"], description: "Заметки, базы данных и проекты.", fullDescription: "Универсальное рабочее пространство.", icon: "https://upload.wikimedia.org/wikipedia/commons/4/45/Notion_app_logo.png", platforms: ["ios", "android", "web"], rating: 4.7, free: true, links: { ios: "https://apps.apple.com/app/notion-notes-docs-tasks/id1232780281", android: "https://play.google.com/store/apps/details?id=notion.id", web: "https://www.notion.so", official: "https://www.notion.so" } },
+  { id: "canva", type: "app", name: "Canva", developer: "Canva", category: "design", categories: ["design", "photo"], description: "Дизайн для всех. Шаблоны и редактор.", fullDescription: "Онлайн-редактор дизайна.", icon: "https://upload.wikimedia.org/wikipedia/commons/0/08/Canva_icon_2021.svg", platforms: ["ios", "android", "web"], rating: 4.8, free: true, links: { ios: "https://apps.apple.com/app/canva-design-photo-video/id897446215", android: "https://play.google.com/store/apps/details?id=com.canva.editor", web: "https://www.canva.com", official: "https://www.canva.com" } },
+  { id: "signal", type: "app", name: "Signal", developer: "Signal Foundation", category: "messengers", categories: ["messengers", "security"], description: "Приватный мессенджер с шифрованием.", fullDescription: "Мессенджер с сильным акцентом на приватность.", icon: "https://upload.wikimedia.org/wikipedia/commons/8/8d/Signal-Logo.svg", platforms: ["ios", "android", "web"], rating: 4.6, free: true, links: { ios: "https://apps.apple.com/app/signal-private-messenger/id874139669", android: "https://play.google.com/store/apps/details?id=org.thoughtcrime.securesms", web: "https://signal.org", official: "https://signal.org" } },
+  { id: "github", type: "app", name: "GitHub", developer: "GitHub / Microsoft", category: "programming", categories: ["programming", "work"], description: "Код, репозитории и Issues.", fullDescription: "Официальное приложение GitHub.", icon: "https://upload.wikimedia.org/wikipedia/commons/9/91/Octicons-mark-github.svg", platforms: ["ios", "android", "web"], rating: 4.6, free: true, links: { ios: "https://apps.apple.com/app/github/id1477376905", android: "https://play.google.com/store/apps/details?id=com.github.android", web: "https://github.com", official: "https://github.com" } }
+];
+
+const WEBSITES = [
+  { id: "google", type: "website", name: "Google", developer: "Google", category: "search", categories: ["search", "popular"], description: "Поисковая система №1 в мире.", fullDescription: "Главный поисковик интернета.", icon: "https://www.google.com/favicon.ico", platforms: ["web"], free: true, popular: true, links: { web: "https://www.google.com", official: "https://www.google.com" } },
+  { id: "youtube-web", type: "website", name: "YouTube", developer: "Google", category: "video", categories: ["video", "popular"], description: "Видеохостинг. Смотрите и загружайте видео.", fullDescription: "Крупнейшая видеоплатформа.", icon: "https://www.youtube.com/favicon.ico", platforms: ["web"], free: true, popular: true, links: { web: "https://www.youtube.com", official: "https://www.youtube.com" } },
+  { id: "wikipedia", type: "website", name: "Википедия", developer: "Wikimedia", category: "education", categories: ["education", "popular"], description: "Свободная энциклопедия.", fullDescription: "Крупнейшая свободная энциклопедия мира.", icon: "https://www.wikipedia.org/static/favicon/wikipedia.ico", platforms: ["web"], free: true, popular: true, links: { web: "https://ru.wikipedia.org", official: "https://www.wikipedia.org" } },
+  { id: "vk-web", type: "website", name: "ВКонтакте", developer: "VK", category: "social", categories: ["social", "popular"], description: "Социальная сеть.", fullDescription: "Крупнейшая соцсеть русскоязычного интернета.", icon: "https://vk.com/images/icons/pwa/favicon.ico", platforms: ["web"], free: true, popular: true, links: { web: "https://vk.com", official: "https://vk.com" } },
+  { id: "yandex", type: "website", name: "Яндекс", developer: "Yandex", category: "search", categories: ["search", "popular"], description: "Поиск, карты, почта, переводчик.", fullDescription: "Крупнейший российский поисковик и экосистема сервисов.", icon: "https://yandex.ru/favicon.ico", platforms: ["web"], free: true, popular: true, links: { web: "https://yandex.ru", official: "https://yandex.ru" } },
+  { id: "chatgpt-web", type: "website", name: "ChatGPT", developer: "OpenAI", category: "ai", categories: ["ai", "popular", "new"], description: "ИИ-чат от OpenAI.", fullDescription: "Веб-версия ChatGPT. Работает в любом браузере, в том числе на iPhone.", icon: "https://chat.openai.com/favicon.ico", platforms: ["web"], free: true, popular: true, links: { web: "https://chat.openai.com", official: "https://openai.com" } },
+  { id: "claude-web", type: "website", name: "Claude", developer: "Anthropic", category: "ai", categories: ["ai", "new"], description: "ИИ-ассистент Claude.", fullDescription: "Веб-версия Claude. Удобно открывать с iPhone.", icon: "https://claude.ai/favicon.ico", platforms: ["web"], free: true, popular: true, links: { web: "https://claude.ai", official: "https://claude.ai" } },
+  { id: "github-web", type: "website", name: "GitHub", developer: "GitHub", category: "programming", categories: ["programming", "work"], description: "Хостинг кода и совместная разработка.", fullDescription: "Крупнейшая платформа для разработчиков.", icon: "https://github.com/favicon.ico", platforms: ["web"], free: true, popular: true, links: { web: "https://github.com", official: "https://github.com" } },
+  { id: "reddit", type: "website", name: "Reddit", developer: "Reddit", category: "social", categories: ["social", "popular"], description: "Форумы и сообщества по интересам.", fullDescription: "Одна из крупнейших площадок обсуждений.", icon: "https://www.reddit.com/favicon.ico", platforms: ["web"], free: true, popular: true, links: { web: "https://www.reddit.com", official: "https://www.reddit.com" } },
+  { id: "netflix-web", type: "website", name: "Netflix", developer: "Netflix", category: "video", categories: ["video", "popular"], description: "Фильмы и сериалы онлайн.", fullDescription: "Стриминговый сервис. Требуется подписка.", icon: "https://www.netflix.com/favicon.ico", platforms: ["web"], free: false, popular: true, links: { web: "https://www.netflix.com", official: "https://www.netflix.com" } },
+  { id: "amazon", type: "website", name: "Amazon", developer: "Amazon", category: "shopping", categories: ["shopping", "popular"], description: "Крупнейший интернет-магазин.", fullDescription: "Товары, книги, электроника и сервисы.", icon: "https://www.amazon.com/favicon.ico", platforms: ["web"], free: true, popular: true, links: { web: "https://www.amazon.com", official: "https://www.amazon.com" } },
+  { id: "stackoverflow", type: "website", name: "Stack Overflow", developer: "Stack Exchange", category: "programming", categories: ["programming", "work"], description: "Вопросы и ответы для программистов.", fullDescription: "Главный сайт для разработчиков.", icon: "https://stackoverflow.com/favicon.ico", platforms: ["web"], free: true, popular: true, links: { web: "https://stackoverflow.com", official: "https://stackoverflow.com" } },
+  { id: "bbc", type: "website", name: "BBC", developer: "BBC", category: "news", categories: ["news", "popular"], description: "Новости и медиа от BBC.", fullDescription: "Международные новости, документалистика, радио.", icon: "https://www.bbc.com/favicon.ico", platforms: ["web"], free: true, popular: true, links: { web: "https://www.bbc.com", official: "https://www.bbc.com" } },
+  { id: "ria", type: "website", name: "РИА Новости", developer: "МИА «Россия сегодня»", category: "news", categories: ["news", "popular"], description: "Российское информационное агентство.", fullDescription: "Новости России и мира.", icon: "https://ria.ru/favicon.ico", platforms: ["web"], free: true, popular: true, links: { web: "https://ria.ru", official: "https://ria.ru" } }
 ];
 
 window.APPS = APPS;
+window.WEBSITES = WEBSITES;
+window.ALL_ITEMS = [...APPS, ...WEBSITES];
 window.CATEGORIES = CATEGORIES;
